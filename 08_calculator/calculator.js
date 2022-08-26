@@ -1,26 +1,46 @@
-const add = function() {
-	
+const add = function(nr1, nr2) {
+  return nr1 + nr2
 };
 
-const subtract = function() {
-	
+const subtract = function(nr1, nr2) {
+	return nr1 - nr2
 };
 
-const sum = function() {
-	
+const sum = function(array) {
+  if (array.length === 0){
+    return 0
+  }
+return array.reduce((total, num) =>{
+    return total + num
+ }, 0)
+ 
+  };
+
+
+const multiply = function(array) {
+return array.reduce((total, num) =>{
+    return total * num
+ }, 1)
 };
 
-const multiply = function() {
-
+const power = function(nr1, nr2) {
+	return nr1 ** nr2
 };
 
-const power = function() {
-	
-};
+const factorial = function fact(nr) {
+    if (nr === 0 || nr === 1){
+      return 1  
+    }
+    else{
+      let acc = nr;
+      while (nr>=2){
+        acc *= (nr-1);
+        nr--
+      }
+      return acc
+    }
+  } 
 
-const factorial = function() {
-	
-};
 
 // Do not edit below this line
 module.exports = {
